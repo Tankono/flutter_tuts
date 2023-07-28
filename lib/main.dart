@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tuts/config/RouteUtils.dart';
-import 'package:flutter_tuts/data/DemoItem.dart';
-import 'package:login_flutter/main.dart';
+import 'ui/inputs/input_page.dart';
+import 'package:flutter_tuts/ui/route_utils.dart';
+import 'package:flutter_tuts/data/demo_item.dart';
 
 void main() async {
-  await initHive();
+  // await initHive();
   runApp(const MyApp());
 }
 
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: ListDemo(),
+      home: InputPage(),
     );
   }
 }

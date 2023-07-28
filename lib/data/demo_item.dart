@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tuts/config/RouteUtils.dart';
+import 'package:flutter_tuts/ui/route_utils.dart';
 
 class DemoItem {
   String? title;
