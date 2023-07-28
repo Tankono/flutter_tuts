@@ -28,7 +28,7 @@ function reset_app(){
 
 function clean_app(){
     folder=$1
-    cd $folder
+    # cd $folder
     echo 'clean app...'$folder
     flutter clean
     echo 'Remove folder android'
