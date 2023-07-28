@@ -26,6 +26,36 @@ function reset_app(){
     
 }
 
+function clean_app(){
+    folder=$1
+    cd $folder
+    echo 'clean app...'$folder
+    flutter clean
+    echo 'Remove folder android'
+    rm -rf android
+    rm -rf .idea
+    rm rf .gitpod.yml
+
+    echo 'Remove folder ios'
+    rm -rf ios
+    echo 'Remove folder web'
+    rm -rf web
+    echo 'Remove folder web'
+    rm -rf windows
+    echo 'Remove folder macos'
+    rm -rf macos
+    echo 'Remove folder linux'
+    rm -rf linux
+    rm -rf .dart_tool
+    rm -rf build
+    rm -rf .flutter-plugins
+    rm -fr .flutter-plugins-dependencies
+    rm -rf .gitpod.Dockerfile
+    rm -rf .metadata
+    rm -rf analysis_options.yaml
+    rm -rf *.iml
+}
+
 function run_web(){
     echo 'Run Web...'
     flutter run -d chrome
@@ -47,7 +77,7 @@ function clean_pc(){
 
 
 }
-
+clean_app
 # clean_pc
-run_web
+# run_web
 # add_module_getx
