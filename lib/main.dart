@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tuts/config/RouteUtils.dart';
 import 'package:flutter_tuts/data/DemoItem.dart';
+import 'package:login_flutter/main.dart';
 
-void main() {
+void main() async {
+  await initHive();
   runApp(const MyApp());
 }
 
@@ -13,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
@@ -41,7 +43,7 @@ class ListDemo extends StatelessWidget {
       title: appTitle,
       home: Scaffold(
           appBar: AppBar(
-            title: Text(appTitle),
+            title: const Text(appTitle),
           ),
           body: ListView.builder(
             itemCount: demos.length,

@@ -15,7 +15,7 @@ class ListPageState<E, S extends StatefulWidget> extends State<S> {
 
   Widget itemView(E entity) {
     return ListTile(
-      title: Text('${entity}'),
+      title: Text('$entity'),
     );
   }
 

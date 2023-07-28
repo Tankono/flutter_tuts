@@ -5,6 +5,8 @@ import '../../data/ProductDataModel.dart';
 import 'package:flutter/material.dart';
 
 class List4 extends StatefulWidget {
+  const List4({super.key});
+
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
@@ -14,7 +16,7 @@ class _MyHomePageState extends State<List4> {
 
   Widget itemView(PostModel entity) {
     return ListTile(
-      title: Text('${entity}'),
+      title: Text('$entity'),
     );
   }
 

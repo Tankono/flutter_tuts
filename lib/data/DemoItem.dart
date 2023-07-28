@@ -53,13 +53,19 @@ class DemoItem {
     item = DemoItem();
     item.title = "DashBoard";
     item.desc = "A screen for login app";
-    item.screenName = "dashboard";
+    item.screenName = "home";
     data.add(item);
 
     item = DemoItem();
     item.title = "JSon Local";
     item.desc = "A screen for login app";
     item.screenName = "json";
+    data.add(item);
+
+    item = DemoItem();
+    item.title = "Shop";
+    item.desc = "A screen for login app";
+    item.screenName = "shop";
     data.add(item);
 
     item = DemoItem();

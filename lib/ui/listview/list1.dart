@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
 
 class List1 extends StatelessWidget {
+  const List1({super.key});
+
   @override
   Widget build(BuildContext context) {
-    final appTitle = 'Flutter Basic List Demo';
+    const appTitle = 'Flutter Basic List Demo';
 
     return MaterialApp(
       title: appTitle,
       home: Scaffold(
         appBar: AppBar(
-          title: Text(appTitle),
+          title: const Text(appTitle),
         ),
         body: ListView(
-          children: <Widget>[
+          children: const <Widget>[
             ListTile(
               leading: Icon(Icons.map),
               title: Text('Map'),
