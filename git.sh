@@ -33,7 +33,7 @@ function commit(){
 
 function create_branch(){
     echo 'create branch...'
-    new_branch="temp"
+    new_branch=$1
     if ["$*" == ""];then
         printf "${RED}[Fails]${NC}:Nhập tên branch mới vào nhé."
         exit 1    
@@ -50,4 +50,5 @@ function create_branch(){
 
 # create_branch app_login
 commit
+# create_branch tuts_input
 #init_repo
