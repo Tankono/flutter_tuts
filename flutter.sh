@@ -77,7 +77,8 @@ function clean_pc(){
 
 
 }
-clean_app
+# clean_app
+flutter create --project-name flutter_tuts --org hdisoft.app.tuts . 
 # clean_pc
 # run_web
 # add_module_getx
