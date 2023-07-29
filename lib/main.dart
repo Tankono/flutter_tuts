@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'ui/inputs/input_page.dart';
-import 'package:flutter_tuts/ui/route_utils.dart';
 import 'package:flutter_tuts/data/demo_item.dart';
+import 'package:flutter_tuts/ui/app_routes.dart';
 
 void main() async {
   // await initHive();
@@ -20,26 +19,21 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: InputPage(),
+      home: ListDemo(),
     );
   }
 }
 
 class ListDemo extends StatelessWidget {
-  final List<DemoItem> demos = DemoItem.getList();
+  final List<DemoItem> demos = getList();
   ListDemo({super.key});
 
   @override
   Widget build(BuildContext context) {
     const appTitle = 'Tutorial';
 
-    void show(DemoItem item) {
-      print("show: ${item.screenName}");
-      Widget src = screenOf(item.screenName!)!;
-      nav(context, src);
-    }
-
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: appTitle,
       home: Scaffold(
           appBar: AppBar(
@@ -51,7 +45,7 @@ class ListDemo extends StatelessWidget {
               DemoItem entity = demos[index];
               return ListTile(
                 title: Text('${entity.title}'),
-                onTap: () => {show(entity)},
+                onTap: () => {entity.showScreen(context)},
               );
             },
           )),

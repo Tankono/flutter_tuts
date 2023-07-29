@@ -1,6 +1,6 @@
 import 'dart:convert';
-import '../../data/BaseModel.dart';
 import 'package:flutter/services.dart';
+import 'base_model.dart';
 
 class JSON {
   static Future<List<dynamic>> readAsset(String jsonPath) async {
