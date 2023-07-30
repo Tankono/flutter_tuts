@@ -20,13 +20,13 @@ class TV extends StatelessWidget {
   final String title;
 
   const TV({super.key, required this.title});
-  TV.small({super.key, required this.title}) {}
+  // TV.small({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
     return Text(
-      '$title',
-      style: TextStyle(color: const Color.fromARGB(255, 33, 20, 20)),
+      title,
+      style: const TextStyle(color: Color.fromARGB(255, 33, 20, 20)),
     );
   }
 }
@@ -160,11 +160,17 @@ class BT extends StatelessWidget {
   }
 }
 
-class BTLogin extends StatelessWidget {
-  String? title;
+class BTLogin extends StatefulWidget {
   final GlobalKey<FormState> formKey;
 
-  BTLogin({super.key, required this.formKey});
+  const BTLogin({super.key, required this.formKey});
+
+  @override
+  State<BTLogin> createState() => _BTLoginState();
+}
+
+class _BTLoginState extends State<BTLogin> {
+  String? title;
 
   @override
   Widget build(BuildContext context) {
@@ -176,7 +182,7 @@ class BTLogin extends StatelessWidget {
         ),
       ),
       onPressed: () {
-        if (formKey.currentState?.validate() ?? false) {
+        if (widget.formKey.currentState?.validate() ?? false) {
           // _boxLogin.put("loginStatus", true);
           // _boxLogin.put("userName", _controllerUsername.text);
 
