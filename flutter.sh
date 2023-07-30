@@ -74,8 +74,6 @@ function clean_pc(){
 
     ps aux | grep "java"
 
-
-
 }
 # clean_app
 # flutter create --project-name flutter_tuts --org hdisoft.app.tuts . 
